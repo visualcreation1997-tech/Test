@@ -1,0 +1,387 @@
+/* RESET & BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #d9230f; /* Red from banner accents */
+    --secondary-color: #ffc107; /* Yellow banner color */
+    --dark-color: #1a1a1a;
+    --light-color: #f8f9fa;
+    --gray-color: #6c757d;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* NAVBAR */
+header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo .badge {
+    background: var(--secondary-color);
+    color: var(--dark-color);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 800;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('WhatsApp Image 2026-09-15 at 14.00.37.jpeg') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #b01907;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: #fff;
+}
+
+.btn-whatsapp:hover {
+    background: #1eb854;
+}
+
+.btn-block {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* ANNOUNCEMENT BAR */
+.announcement-bar {
+    background: var(--secondary-color);
+    color: var(--dark-color);
+    padding: 12px 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* SECTIONS */
+.section {
+    padding: 70px 0;
+}
+
+.bg-light {
+    background-color: var(--light-color);
+}
+
+.section-header {
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    color: var(--dark-color);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ABOUT SECTION */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.sub-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.about-features {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.about-features li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-features i {
+    color: #28a745;
+}
+
+.image-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-caption {
+    background: var(--dark-color);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+/* MENU SECTION */
+.menu-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 8px 18px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.menu-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.menu-icon {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    background: rgba(217, 35, 15, 0.1);
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.menu-info h3 {
+    font-size: 1.1rem;
+}
+
+.menu-info p {
+    font-size: 0.85rem;
+    color: var(--gray-color);
+}
+
+.menu-info .price {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 5px;
+    display: block;
+}
+
+/* FACILITIES */
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.facility-card {
+    background: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.facility-card i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    background: var(--dark-color);
+    padding: 15px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* LOCATION SECTION */
+.location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.info-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* FOOTER */
+footer {
+    background: var(--dark-color);
+    color: #fff;
+    padding: 25px 0;
+}
+
+footer .credits {
+    font-size: 0.8rem;
+    color: var(--gray-color);
+    margin-top: 5px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .about-grid, .location-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
